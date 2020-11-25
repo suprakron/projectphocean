@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+<title>{% block titie %} zone : logokmitl {% endblock %}</title>
+
+
+
+
+{% block content %}
+<header>
+  <h3>มุมถ่ายภาพป้ายสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</h3>
+  <p>มุมนี้มีความสวยงาม เป็นเอกลักษณ์เฉพาะตัว เพราะเป็นป้ายชื่อสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</P>
+</header>
+<section>
+  <div class="column  alert-warning"><img src="{% static 'image/logo4.jpg'%}"/></div>
+  <div class="column  alert-warning"><img src="{% static 'image/logo5.jpg'%}"/></div>
+  <div class="column  alert-warning"><img src="{% static 'image/logo3.jpg'%}"/></div>
+
+  <div class="column  alert-warning"><img src="{% static 'image/logo5.jpg'%}"/></div>
+  
+  <div class="column dark-red"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/pexels-photo-432059.jpeg"/></div>
+  <div class="column flat-retro"><img src="https://images.pexels.com/photos/167483/pexels-photo-167483.jpeg?h=350&auto=compress"/></div>
+</section>
+{% endblock %}

@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zone</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/zone.css'%}">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{% url 'zone' %}">phocean</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          
+
+        </li>
+      </ul>
+    <div>
+      {% if user.is_authenticated %}
+      <a href="#"> <font color="white">สวัสดี &nbsp {{user.first_name}}&nbsp&nbsp{{user.last_name}}</font> </a> 
+      {% endif %}
+    </div>
+      <form>
+        <a class="btn btn-outline-primary" href="{% url 'logout' %}" role="button"  >logout</a>
+      </form>
+    </div>
+  </nav>
+
+
+    <h1 class="main-title">สถานที่ถ่ายภาพตามมุมต่างๆภายในสจล</h1>
+
+<div class="container">
+  <h3 class="title">มุมพระเทพ</h3>
+  <div class="content">
+    <a href="{% url 'pratep' %}" target="_blank">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{% static 'image/pt2.jpg' %}">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title"> เป็นมุมที่ยอดฮิต</h3>
+        <p class="content-text">ของเด็กสจล</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="title">มุมที่คณะครุศาสตร์</h3>
+  <div class="content">
+    <a href="{% url 'karusart' %}" target="_blank">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{% static 'image/kr2.jpg' %}">
+      <div class="content-details fadeIn-top">
+        <h3>เป็นตึกเรียนของเด็กครุศาสตร์</h3>
+        <p>และเป็นที่ยอดฮิตของเหล่าเด็กครุศาสตร์</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="title">มุมถ่ายโซนป้ายสถาบัน</h3>
+  <div class="content">
+    <a href="{% url 'logokmitl'%}" target="_blank">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{% static 'image/logo4.jpg' %}">
+      <div class="content-details fadeIn-left">
+        <h3>เป็นมุมยอดฮิต</h3>
+        <p>เมื่อมีกิจกรรมก็จะไปถ่ายรูปบ่อยๆ</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="title">มุมถ่ายภาพโซนวิศวะ</h3>
+  <div class="content">
+    <a href="{% url 'engineer'%}" target="_blank">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{% static 'image/wt1.jpg' %}">
+      <div class="content-details fadeIn-right">
+        <h3>เป็นที่ยอดฮิตของเด็กวิศวะ</h3>
+        
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="title">มุมถ่ายภาพพระจอม</h3>
+  <div class="content">
+    <a href="{% url 'prajom' %}" target="_blank">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{% static 'image/3.jpg' %}">
+      <div class="content-details fadeIn-top fadeIn-left">
+        <h3>เป็นมุมยอดฮิตสำหรับถ่ายรูป</h3>
+        <p>เมื่อรับปริญญาหรืองานหลักๆ</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="title">มุมถ่ายภาพโซนคณะสถาปัต</h3>
+  <div class="content">
+    <a href="{% url 'satapat'%}" target="_blank">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{% static 'image/st2.jpg' %}">
+      <div class="content-details fadeIn-bottom fadeIn-left">
+        <h3>มุมยอดฮิตสำหรับสายถ่ายภาพ</h3>
+        <p>เป็นที่สวยงามมาก</p>
+      </div>
+    </a>
+  </div>
+</div>
+ 
+
+
+
+ 

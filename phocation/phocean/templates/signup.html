@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ลงทะเบียน</title>
+    <link rel="stylesheet" href="{% static 'css/register.css'%}">
+</head>
+<body>
+  <div class="login-box">
+    <h1>ลงทะเบียน</h1>
+    
+    <form method="POST">
+      {% csrf_token %}
+      
+       
+       <div class="user-box">
+        <label for="first_name"></label>
+        <input type="text" class="user-box"id="first_name" name="first_name">
+     <label>ชื่อ</label>
+      </div>
+
+      <div class="user-box">
+        <label for="last_name"></label>
+        <input type="text" class="user-box" id="last_name" name="last_name">
+      <label>นามสกุล</label>
+      </div>
+
+
+      <div class="user-box w-50">
+        <label for="email"></label>
+        <input type="email" class="user-box" id="email" name="email">
+        <label>อีเมลล์</label>
+      </div>
+
+      <div class="user-box w-50">
+        <label for="password"></label>
+        <input type="password" class="user-box" id="password" name="password">
+        <label>รหัสผ่าน</label>
+      </div>
+      <button type="submit" class="btn btn-primary">สมัคร</button>
+
+    </form>
+  </div>
+
+</div>
+</body>
+</html>
